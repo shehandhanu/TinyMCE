@@ -8,7 +8,12 @@
 
     <script>
       tinymce.init({
-        selector: '#mytextarea'
+        selector: '#myTextarea',
+        setup: function (editor) {
+          editor.on('init', function (e) {
+            editor.setContent('https://res.cloudinary.com/dxz8wbaqv/raw/upload/v1645159109/Document4_-_Copy_z90xd7.docx');
+          });
+        }
       });
     </script>
 
